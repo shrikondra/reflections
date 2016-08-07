@@ -1,0 +1,109 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+	- To create the .git directory and enable user to perform commit later on. Initially the commit count is zero.
+
+
+	Instructor Notes:
+		If you accidentally add a file to the staging area, you can remove it using git reset. For example, if you accidentally add lesson_2_reflections.txt, but don’t want it to be committed yet, run git reset lesson_2_reflections.txt and the file will be removed from the staging area, but it will still be in your working directory.
+
+		Checkout the Git Cheatsheet at: https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf
+
+	Some useful command.
+		(Checkout cheatsheet for details!)
+
+		git init             # initialize repository
+		git add <file>       # add file from work directory to staging area
+		git status           # check Git Status (Gives you a hint of difference between work area, staging area, and repository)
+		git reset <file>     # unstaged the file
+		git diff             # compare work directory and staging.
+		git diff --staged    # compare staging and repository.
+		git log --graph --oneline master <branch-name>
+		git checkout <branch-name>
+		git checkout -b <new-branch-name>   # this is the same as 
+		                                    #   git branch <new-branch-name>
+		                                    #   git checkout <new-branch-name>
+		git show              # compare latest commit with parent.
+		git show commit_id    # compare with parent.
+	    git branch -d <branch-name>   # to delete the branch.
+	    git merge --abort
+
+##############################################################
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+	= You add files that are in the working directory into the staging area - these are the files to be tracked by Git.
+	- You then do a mass commit to take a snapshot of the entire staging area and add to the Git repository.
+
+##############################################################
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+	- Commit after fixing a bug.
+
+##############################################################
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+	- When you wish to make a different version of the master game.
+	- When you are moving on to a different piece of work.
+	- Production master branch is intacted, always worked.
+	- Developmeent branch with unique feature (that can be shared with the public)
+
+##############################################################
+
+How do the diagrams help you visualize the branch structure?
+
+	- To visualize branches.
+
+##############################################################
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+	- Combine the up-to-date master with a new feature (branch).
+
+##############################################################
+
+Some online graphing tools:
+
+	- https://www.gliffy.com/
+	- http://yuml.me/diagram/activity/draw
+
+Git graphing tool:
+
+	git log --graph
+
+
+##############################################################
+(From a forum) How to un-do commit? (Is there a way to undo merging 2 branches together? I somehow merged easy-mode into master mode.)
+
+	I had the same issues. Here is what I learned from stackoverflow
+
+	git reset --hard commit_sha   # this works 
+	or
+
+	git reset --hard HEAD~5
+	will get you back 5 commits.
+
+	or
+
+	git reset --merge ORIG_HEAD
+	http://stackoverflow.com/questions/161813/fix-merge-conflicts-in-git
+
+##############################################################
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+	Auto:
+		Pros:
+			- quick and easy.
+		Cons:
+			- might not end up with a version with what you'd expect.
+			- potential conflicts between the two merged branches.
+
+	Manual:
+		pros:
+			- highest control
+		cons:
+			- can be slower than autos.
+
+##############################################################

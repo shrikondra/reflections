@@ -1,0 +1,69 @@
+##############################################################
+
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+	Pin-pointing the line numbers that are different.
+
+##############################################################
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+	- Save time. 
+	- Can back track previous versions of files easily. 
+	- Can compare different version. 
+	- Can re-use old versions.
+
+##############################################################
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+
+	Pros:
+		- Highest Controls
+		- No surprises.
+
+	Cons:
+		- You may accidentally forget to commit changes.
+
+##############################################################
+
+How can you use the commands git log and git diff to view the history of files?
+
+	# one off
+	git clone <git-repository-path>
+	git config --global color.ui auto
+
+	# for the exercise
+	git log
+	git diff <id-old> <id-new>
+
+
+	git --stat
+	git -- version
+
+##############################################################
+
+Useful git commands....
+
+	git clone <git-repository-path>
+	git config --global color.ui auto
+
+	git log
+	git log --stat
+	git reflog
+	git diff <id-old> <id-new>
+	git -- version
+	git checkout <commit-id>
+	git checkout master
+	git init
+	git status
+
+##############################################################
+
+How might using version control make you more confident to make changes that could break something?
+
+	- No need to be afraid to make major changes anymore as I can always backout to previous versions.
+	- No need to worry about manually renaming files (e.g. file_v1.txt, file_v2.txt....) which could become messy.
+	  Git keeps the filenames and simply take snapshots when major changes have been performed.
+	- I will become more consistent in making and backing out changes. Making me a better collaborators with other people.
+
+##############################################################
