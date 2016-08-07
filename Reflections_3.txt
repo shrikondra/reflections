@@ -1,0 +1,58 @@
+When would you want to create a remote repository rather than keeping all your work local?
+
+	- If I wish to build something based on someone else's Github codebase, I am able to "fork" the original repository to my Github account. Then develop from there.
+	  (Rather than downloading someone else's Github repository, onto my local PC desktop, followed by uploading to my Github account.)
+	- Having a remote repository enable ease of remote collaboration with other programmers.
+	- It also enables ease of project sharing to the public.
+	- It also acts as a form of "backup". e.g. if the home PC desktop blows up, it's good to know there is a backup repository in the cloud (GitHub).
+
+
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
+	- not quite sure... (yet!)
+
+
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+	https://www.udacity.com/course/viewer#!/c-ud775/l-3105028581/e-3073678901/m-3073678903
+	http://www.eqqon.com/index.php/Collaborative_Github_Workflow
+
+	- branch: node A of local repository branch out to node B and C of same local repository
+	- clone: clone lcoal repository A from one local location to another local location.
+	- clone: cline Github repository A from one Github location to another local location.  (and vice versa)
+	- fork: clone Github repository A from one Github location to another Github location.  (and vice versa)
+
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+
+	- provide an opportunity to merge the remote reposit with the local reposit and keep up-to-date.
+
+
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+	- To collaborate without using Git / GitHub, each person will need to agree who work on what so there is no overlap.
+	- If overlap is expected, will need to make sure each person have had a copy of the entire code base so there is no interference between individuals.
+	- Whenever someone is ready to make an update, that someone will need to manually coordinate with the rest and find out whether it's ok to promote to production.
+	- This is ok for small projects. For large project, a more sophisicated version control system may make the developmenet life cycle more consistent.
+
+
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+
+	- branch is especially good for experimeneting something risky without impacting the original master.
+	- only when the user is fairly satisfied with the branch version, the user may then decide whether to merge that new feature back to master.
+	- using too many branches might cause complication (so be aware I guess?). 
+	- Sticking to a linear master approach (without branches) is easy. Good for incremental changes (rather than big experimental stuff.)
+
+Extra notes...
+
+	Previously when I submit the command..
+	
+		git commit
+
+	It kept giving me the error message... error: There was a problem with the editor.... Please supply the message using either -m or -F option.
+
+	These forums has some useful info
+
+		http://forums.udacity.com/questions/100248013/problem-with-git-commit?page=1&focusedAnswerId=100265946#100265946
+
+http://apple.stackexchange.com/questions/57672/error-there-was-a-problem-with-the-editor-vi-when-using-it-with-git
